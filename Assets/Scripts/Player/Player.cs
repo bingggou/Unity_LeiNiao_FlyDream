@@ -1,4 +1,4 @@
-using FfalconXR.Native;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -310,14 +310,7 @@ public class Player : MonoBehaviour
 
     protected void ResetGlass(bool whinMobile = false)
     {
-        if (NativeModule.Instance != null)
-        {
-            NativeModule.Instance.ResetGlassQuat();
-            if (whinMobile == true)
-            {
-                NativeModule.Instance.ResetMobileQuat();
-            }
-        }
+       
     }
 
     void UpdateCameraLocalEuler()
@@ -355,10 +348,10 @@ public class Player : MonoBehaviour
 
         if (isRunInGlass)
         {
-            if (NativeModule.Instance != null)
+            if (/*NativeModule.Instance != null*/true)
             {
-
-                Quaternion headRotation = NativeModule.Instance.GetGlassesQualternion();
+                //这里给头自身旋转度
+                Quaternion headRotation =MyCamera.instance.targetCamera.transform.localRotation;
                 Vector3 euler = headRotation.eulerAngles;
 
                 float aimx = CheckAngle(euler.x);
@@ -425,8 +418,8 @@ public class Player : MonoBehaviour
     protected virtual void UpdateLog()
     {
         logText.text = "";
-        logText.text += "头的欧拉:" + NativeModule.Instance.GetGlassesQualternion().eulerAngles + "\n";
-        logText.text += "眼镜实例：" + NativeModule.Instance + "\n";
+       // logText.text += "头的欧拉:" + NativeModule.Instance.GetGlassesQualternion().eulerAngles + "\n";
+        //logText.text += "眼镜实例：" + NativeModule.Instance + "\n";
         logText.text += "是否眼镜控制：" + isRunInGlass + "\n";
     }
 

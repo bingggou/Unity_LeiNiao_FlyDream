@@ -27452,6 +27452,10 @@ PrefabInstance:
       propertyPath: isMotionBluer
       value: 
       objectReference: {fileID: 7615952742498363543}
+    - target: {fileID: 5872892322812510506, guid: 906c13883b5b438449a9e4af2a085afa, type: 3}
+      propertyPath: m_VolumeLayerMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 906c13883b5b438449a9e4af2a085afa, type: 3}
 --- !u!114 &6487565894740132684

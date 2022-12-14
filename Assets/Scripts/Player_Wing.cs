@@ -1,4 +1,4 @@
-using FfalconXR.Native;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -62,7 +62,7 @@ public class Player_Wing : Player
 
     Text scoreText;
     Text speedText;
-    GameObject laserBeam;
+    //GameObject laserBeam;
     ParticleSystem dieFx;
     float nowDistenceFromBuilding;
     Vector3 lastScorePos;
@@ -89,7 +89,7 @@ public class Player_Wing : Player
         mainUi.SetActive(false);
         gameUi.SetActive(true);
         //laserBeam
-        laserBeam.SetActive(false);
+        //laserBeam.SetActive(false);
         SetDeadBodyVisiable(false);
         ResetGlass();
     }
@@ -113,7 +113,7 @@ public class Player_Wing : Player
 
 
         yield return new WaitForSeconds(2);
-        laserBeam.SetActive(true);
+        //laserBeam.SetActive(true);
         mainUi.SetActive(true);
         gameUi.SetActive(false);
         transform.position = originalPos;
@@ -279,7 +279,7 @@ public class Player_Wing : Player
 
     private void Start()
     {
-        laserBeam = TransformHelper.GetChild(MyCamera.instance.targetCamera.transform, nameof(laserBeam)).gameObject;
+       // laserBeam = TransformHelper.GetChild(MyCamera.instance.targetCamera.transform, nameof(laserBeam)).gameObject;
     }
 
 

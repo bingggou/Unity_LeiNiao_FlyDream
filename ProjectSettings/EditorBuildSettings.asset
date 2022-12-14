@@ -6,16 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: "Assets/Scenes/\u7070\u76D2\u5B50\u7FC5\u8180\u52A8.unity"
+    path: "Assets/Scenes/Others/\u7070\u76D2\u5B50\u7FC5\u8180\u52A8.unity"
     guid: cdc7037034c1db64099040c0d18dd071
   - enabled: 0
-    path: Assets/Scenes/MainMeun.unity
+    path: Assets/Scenes/Others/MainMeun.unity
     guid: 369b11374e190bf44b306e4b67e30c0d
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/URP\u6D4B\u8BD5.unity"
     guid: c96a5a6a063d819499e467ad3bf48026
   - enabled: 0
-    path: "Assets/Scenes/\u624B\u673A\u6D4B\u8BD5.unity"
+    path: "Assets/Scenes/Others/\u624B\u673A\u6D4B\u8BD5.unity"
     guid: 05fa26f83793254409c49239f2823c1f
+  - enabled: 0
+    path: "Assets/Scenes/\u6D4B\u8BD5\u573A\u666F/Pico\u5168\u529F\u80FD\u6D4B\u8BD5.unity"
+    guid: e1e31f192a2f20847ad56eb6d0c50a43
+  - enabled: 1
+    path: Assets/Scenes/VR.unity
+    guid: 1e32368a1aba5574b8f0201c59fdaa5d
   m_configObjects:
+    Unity.XR.PXR.Settings: {fileID: 11400000, guid: a2e86fd2a9237824db9607cec20b20b9, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2a1a61585a10f684eb57092d12faed08, type: 2}

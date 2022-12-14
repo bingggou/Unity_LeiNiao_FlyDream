@@ -1,4 +1,4 @@
-using FfalconXR.Native;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,34 +30,20 @@ public class MyCamera : MonoBehaviour
 
         //transform.position = targetCamera.position;
         // transform.rotation = targetCamera.rotation;
-
-#if !UNITY_EDITOR
-        ChangeFov(-66);
-
-#endif
-
+        ChangeFov(60);
     }
 
     private void Update()
     {
-        if (Google.XR.Cardboard.Api.HasNewDeviceParams())
-        {
-
-            Google.XR.Cardboard.Api.ReloadDeviceParams();
-        }
+      
     }
 
 
 
     public void ChangeFov(int value)
     {
-
-
         targetCamera.fieldOfView = value;
-        if (NativeModule.Instance != null)
-        {
-            NativeModule.Instance.ChangeFov(value);
-        }
+       
     }
     // Update is called once per frame
     void FixedUpdate()
